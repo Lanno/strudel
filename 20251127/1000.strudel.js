@@ -1,0 +1,8 @@
+setcpm(60)
+$: s("<hh*2 hh*2 hh*2 hh*2>").bank("akailinn").gain(0.2)
+$: s("<[bd@3 bd] sd [bd bd] sd>").bank("akailinn")
+$: n("[1,3] <- - - [1,3]>".add(8).sub(1).sub("<0 1 0 1>")).scale("A:minor").gain(0.3).sound("piano")
+$: n("<1@2 2 [- - 2 3]>".sub(1)).scale("A:minor").sound("piano")
+$: n("<5@4 <[3 4 2 4] [6 5 3 4] [2 4 3 4]>@4>*32".sub(1).off(1/2, x=>x.add(7).gain(0.7))).scale("A:minor").sound("gm_bassoon").lpf(400)
+$: s("hh!8?")
+$: n("<- - - [3 4 2 3 4 3 2 4 3 4]?>".sub(1)).scale("A:minor").sound("saw").gain(0.5)
