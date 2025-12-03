@@ -1,4 +1,8 @@
-.duckorbit(1).duckdepth(0.3).duckattack(0.3)
+setcpm(75)
+
+// Instruments
+const melody_inst = (_note) => _note.sound("sin").scale("e:minor").fm(1).fm(1.9).adsr(0.5, 0.1, 0, 0.1).pan(rand.range(0.3, 0.7))
+const bass_inst = (_note) => _note.sound("tri").scale("e:minor").fm(1).fmh(2.02).adsr(0, 0.1, 0, 0).duckorbit(1).duckdepth(0.3).duckattack(0.3)
 const bd_inst = (_sound) => _sound.bank("casiosk1").room(0.1)
 const sd_inst = (_sound) => _sound.bank("casiosk1").distort(1.5).room(0.15).gain(0.3)
 const rd_inst = (_sound) => _sound.bank("casiosk1").distort(1).room(0.1).gain(0.1)
